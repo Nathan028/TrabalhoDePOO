@@ -397,6 +397,11 @@
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel12">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/assets/mago.png"/>
+        </Property>
+      </Properties>
     </Component>
   </SubComponents>
 </Form>
