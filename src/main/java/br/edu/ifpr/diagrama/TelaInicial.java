@@ -1,7 +1,7 @@
 package br.edu.ifpr.diagrama;
 
 
-import br.edu.ifpr.diagrama.CadastroPersonagem;
+import br.edu.ifpr.diagrama.CadastroMago;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -95,7 +95,7 @@ public class TelaInicial extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-            CadastroPersonagem cadastroPersonagem = new CadastroPersonagem();
+            CadastroMago cadastroPersonagem = new CadastroMago();
             
             this.setVisible(false);
             cadastroPersonagem.setVisible(true);
