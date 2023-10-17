@@ -36,8 +36,8 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/guerreira.png"))); // NOI18N
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 130, 230));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/fundo.png"))); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, -1, -1));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/g2lCse.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 330));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
