@@ -68,11 +68,22 @@ public class CadastroMago extends javax.swing.JFrame {
 
         jButton1.setText("Cadastrar");
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 380, 100, 30));
+
+        jTextField2.setEditable(false);
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 170, -1));
+
+        jTextField3.setEditable(false);
         getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 170, -1));
+
+        jTextField4.setEditable(false);
         getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 170, -1));
+
+        jTextField5.setEditable(false);
+        jTextField5.setText("100");
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 170, -1));
         getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 170, -1));
+
+        jTextField7.setEditable(false);
         getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 170, -1));
 
         pack();
