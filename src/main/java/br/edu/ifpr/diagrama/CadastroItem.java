@@ -92,6 +92,8 @@ public class CadastroItem extends javax.swing.JFrame {
         jLabel4.setText("Preço do Item:");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
+        jTextField2.setEditable(false);
+        jTextField2.setText("10 pontos");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -105,12 +107,17 @@ public class CadastroItem extends javax.swing.JFrame {
         jLabel6.setText("Bônus de defesa:");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, -1));
 
+        jTextField3.setEditable(false);
+        jTextField3.setText("2 a 10");
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
             }
         });
         getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 110, -1));
+
+        jTextField4.setEditable(false);
+        jTextField4.setText("2 a 10");
         getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 300, 110, -1));
 
         jButton1.setText("Cadastrar");
