@@ -28,11 +28,8 @@ public class CampoDeBatalha extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel8 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jComboBox3 = new javax.swing.JComboBox<>();
         jLabel9 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
@@ -45,27 +42,15 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         jTextField10 = new javax.swing.JTextField();
         jTextField11 = new javax.swing.JTextField();
         jTextField12 = new javax.swing.JTextField();
-        jComboBox4 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/guerreira.png"))); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 140, 240));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Guerrreira", "Mago" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 180, -1));
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 170, -1));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/guerreiro fofo.png"))); // NOI18N
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 220, 240));
 
         jTextField1.setEditable(false);
-        jTextField1.setText("Nome");
+        jTextField1.setText("Phoebe");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -74,16 +59,13 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 190, -1));
 
         jButton1.setText("Começar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 600, 110, 20));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 560, 110, 20));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mago", "Guerreira" }));
-        getContentPane().add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 40, 200, -1));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/mago.png"))); // NOI18N
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 60, -1, -1));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/Mago Fofo.png"))); // NOI18N
+        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 80, -1, -1));
 
         jTextField2.setEditable(false);
-        jTextField2.setText("Vida");
+        jTextField2.setText("100");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -92,57 +74,54 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 190, -1));
 
         jTextField3.setEditable(false);
-        jTextField3.setText("Ataque");
+        jTextField3.setText("20 a 25");
         getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 190, -1));
 
         jTextField4.setEditable(false);
-        jTextField4.setText("Defesa");
+        jTextField4.setText("10 a15");
         getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 190, -1));
 
         jTextField5.setEditable(false);
-        jTextField5.setText("Força");
+        jTextField5.setText("Multiplicador ataque - 2 a 10");
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, 190, -1));
 
         jTextField6.setEditable(false);
-        jTextField6.setText("Velocidade");
+        jTextField6.setText("Multiplicador defesa - 2 a 10");
         getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 190, -1));
 
         jTextField7.setEditable(false);
-        jTextField7.setText("Nome");
+        jTextField7.setText("Saori");
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField7ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 340, 190, -1));
+        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 340, 190, -1));
 
         jTextField8.setEditable(false);
-        jTextField8.setText("Vida");
+        jTextField8.setText("100");
         jTextField8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField8ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 370, 190, -1));
+        getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, 190, -1));
 
         jTextField9.setEditable(false);
-        jTextField9.setText("Ataque");
-        getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 400, 190, -1));
+        jTextField9.setText("20 a 25");
+        getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 400, 190, -1));
 
         jTextField10.setEditable(false);
-        jTextField10.setText("Defesa");
-        getContentPane().add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 430, 190, -1));
+        jTextField10.setText("5 a 10");
+        getContentPane().add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 430, 190, -1));
 
         jTextField11.setEditable(false);
-        jTextField11.setText("Inteligência");
-        getContentPane().add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 460, 190, -1));
+        jTextField11.setText("Multiplicador ataque - 2 a 10");
+        getContentPane().add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 460, 190, -1));
 
         jTextField12.setEditable(false);
-        jTextField12.setText("Recuperação");
-        getContentPane().add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 490, 190, -1));
-
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        getContentPane().add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 40, 190, -1));
+        jTextField12.setText("Multiplicador defesa - 2 a 10");
+        getContentPane().add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 490, 190, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -150,10 +129,6 @@ public class CampoDeBatalha extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
@@ -267,10 +242,6 @@ public class CampoDeBatalha extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField1;

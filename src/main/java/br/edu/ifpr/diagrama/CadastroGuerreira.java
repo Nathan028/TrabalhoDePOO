@@ -63,14 +63,17 @@ public class CadastroGuerreira extends javax.swing.JFrame {
         jLabel7.setText("Velocidade:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/guerreira.png"))); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 70, -1, -1));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/guerreiro fofo.png"))); // NOI18N
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, 230, -1));
 
         jButton1.setText("Cadastrar");
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 380, 100, 30));
+
+        jTextField1.setText("Phoebe");
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 170, -1));
 
         jTextField2.setEditable(false);
+        jTextField2.setText("Multiplicador defesa - 2 a 10");
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 170, -1));
 
         jTextField3.setEditable(false);
@@ -83,12 +86,15 @@ public class CadastroGuerreira extends javax.swing.JFrame {
         getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 170, -1));
 
         jTextField4.setEditable(false);
+        jTextField4.setText("15 a 20");
         getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 170, -1));
 
         jTextField5.setEditable(false);
+        jTextField5.setText("10 a15");
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 170, -1));
 
         jTextField6.setEditable(false);
+        jTextField6.setText("Multiplicador ataque - 2 a 10");
         getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 170, -1));
 
         pack();

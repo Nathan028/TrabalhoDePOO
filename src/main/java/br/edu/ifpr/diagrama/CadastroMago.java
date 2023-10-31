@@ -63,27 +63,34 @@ public class CadastroMago extends javax.swing.JFrame {
         jLabel7.setText("Recuperação:");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/mago.png"))); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, -1, -1));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/Mago Fofo.png"))); // NOI18N
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
 
         jButton1.setText("Cadastrar");
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 380, 100, 30));
 
         jTextField2.setEditable(false);
+        jTextField2.setText("5 a 10");
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 170, -1));
 
         jTextField3.setEditable(false);
+        jTextField3.setText("Multiplicador ataque - 2 a 10");
         getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 170, -1));
 
         jTextField4.setEditable(false);
+        jTextField4.setText("20 a 25");
         getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 170, -1));
 
         jTextField5.setEditable(false);
         jTextField5.setText("100");
         getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 170, -1));
+
+        jTextField6.setText("Saori");
         getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 170, -1));
 
         jTextField7.setEditable(false);
+        jTextField7.setText("Multiplicador defesa - 2 a 10");
+        jTextField7.setToolTipText("");
         getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 170, -1));
 
         pack();
