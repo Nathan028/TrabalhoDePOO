@@ -44,10 +44,11 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         jTextField12 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/guerreiro fofo.png"))); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 220, 240));
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(0, 70, 220, 240);
 
         jTextField1.setEditable(false);
         jTextField1.setText("Phoebe");
@@ -56,13 +57,16 @@ public class CampoDeBatalha extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 190, -1));
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(20, 340, 190, 22);
 
         jButton1.setText("Começar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 560, 110, 20));
+        getContentPane().add(jButton1);
+        jButton1.setBounds(270, 560, 110, 20);
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/Mago Fofo.png"))); // NOI18N
-        getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 80, -1, -1));
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(430, 80, 225, 225);
 
         jTextField2.setEditable(false);
         jTextField2.setText("100");
@@ -71,23 +75,28 @@ public class CampoDeBatalha extends javax.swing.JFrame {
                 jTextField2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 190, -1));
+        getContentPane().add(jTextField2);
+        jTextField2.setBounds(20, 370, 190, 22);
 
         jTextField3.setEditable(false);
         jTextField3.setText("20 a 25");
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 190, -1));
+        getContentPane().add(jTextField3);
+        jTextField3.setBounds(20, 400, 190, 22);
 
         jTextField4.setEditable(false);
         jTextField4.setText("10 a15");
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 430, 190, -1));
+        getContentPane().add(jTextField4);
+        jTextField4.setBounds(20, 430, 190, 22);
 
         jTextField5.setEditable(false);
         jTextField5.setText("Multiplicador ataque - 2 a 10");
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, 190, -1));
+        getContentPane().add(jTextField5);
+        jTextField5.setBounds(20, 460, 190, 22);
 
         jTextField6.setEditable(false);
         jTextField6.setText("Multiplicador defesa - 2 a 10");
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, 190, -1));
+        getContentPane().add(jTextField6);
+        jTextField6.setBounds(20, 490, 190, 22);
 
         jTextField7.setEditable(false);
         jTextField7.setText("Saori");
@@ -96,7 +105,8 @@ public class CampoDeBatalha extends javax.swing.JFrame {
                 jTextField7ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 340, 190, -1));
+        getContentPane().add(jTextField7);
+        jTextField7.setBounds(440, 340, 190, 22);
 
         jTextField8.setEditable(false);
         jTextField8.setText("100");
@@ -105,23 +115,28 @@ public class CampoDeBatalha extends javax.swing.JFrame {
                 jTextField8ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 370, 190, -1));
+        getContentPane().add(jTextField8);
+        jTextField8.setBounds(440, 370, 190, 22);
 
         jTextField9.setEditable(false);
         jTextField9.setText("20 a 25");
-        getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 400, 190, -1));
+        getContentPane().add(jTextField9);
+        jTextField9.setBounds(440, 400, 190, 22);
 
         jTextField10.setEditable(false);
         jTextField10.setText("5 a 10");
-        getContentPane().add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 430, 190, -1));
+        getContentPane().add(jTextField10);
+        jTextField10.setBounds(440, 430, 190, 22);
 
         jTextField11.setEditable(false);
         jTextField11.setText("Multiplicador ataque - 2 a 10");
-        getContentPane().add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 460, 190, -1));
+        getContentPane().add(jTextField11);
+        jTextField11.setBounds(440, 460, 190, 22);
 
         jTextField12.setEditable(false);
         jTextField12.setText("Multiplicador defesa - 2 a 10");
-        getContentPane().add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 490, 190, -1));
+        getContentPane().add(jTextField12);
+        jTextField12.setBounds(440, 490, 190, 22);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

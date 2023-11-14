@@ -1,9 +1,12 @@
-package br.edu.ifpr.diagrama;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+package br.edu.ifpr.diagrama;
+
+import br.edu.ifpr.thecoxinhagame.conexao.Conexao;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -16,6 +19,19 @@ public class CadastroGuerreira extends javax.swing.JFrame {
      */
     public CadastroGuerreira() {
         initComponents();
+        
+        int ataque = (int) (Math.random() * (20 - 15 + 1) + 15);
+        txtPontosAtaque.setText("" + ataque);
+
+        int defesa = (int) (Math.random() * (15 - 10 + 1) + 10);
+        txtPontosDefesa.setText("" + defesa);
+
+        int forca = (int) (Math.random() * (10 - 2 + 1) + 2);
+        txtForca.setText("" + forca);
+
+        int velocidade = (int) (Math.random() * (10 - 2 + 1) + 2);
+        txtVelocidade.setText("" + velocidade);
+        
     }
 
     /**
@@ -35,132 +51,143 @@ public class CadastroGuerreira extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
+        txtNome = new javax.swing.JTextField();
+        txtVelocidade = new javax.swing.JTextField();
+        txtPontosVida = new javax.swing.JTextField();
+        txtPontosAtaque = new javax.swing.JTextField();
+        txtPontosDefesa = new javax.swing.JTextField();
+        txtForca = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(null);
 
         jLabel1.setText("Nome:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(10, 10, 36, 16);
 
-        jLabel3.setText("Vida:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+        jLabel3.setText("Pontos de Vida");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(10, 70, 79, 16);
 
-        jLabel4.setText("Ataque:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
+        jLabel4.setText("Pontos de Ataque");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(10, 130, 94, 16);
 
-        jLabel5.setText("Defesa:");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
+        jLabel5.setText("Pontos de Defesa");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(10, 190, 91, 16);
 
         jLabel6.setText("Força:");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(10, 250, 32, 16);
 
         jLabel7.setText("Velocidade:");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, -1));
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(10, 310, 61, 16);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/guerreiro fofo.png"))); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 60, 230, -1));
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(180, 60, 230, 250);
 
-        jButton1.setText("Cadastrar");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 380, 100, 30));
-
-        jTextField1.setText("Phoebe");
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 170, -1));
-
-        jTextField2.setEditable(false);
-        jTextField2.setText("Multiplicador defesa - 2 a 10");
-        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 170, -1));
-
-        jTextField3.setEditable(false);
-        jTextField3.setText("100");
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("Salvar Guerreira");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 170, -1));
+        getContentPane().add(jButton1);
+        jButton1.setBounds(150, 380, 120, 30);
 
-        jTextField4.setEditable(false);
-        jTextField4.setText("15 a 20");
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 170, -1));
+        txtNome.setText("Phoebe");
+        txtNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomeActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtNome);
+        txtNome.setBounds(10, 30, 170, 22);
 
-        jTextField5.setEditable(false);
-        jTextField5.setText("10 a15");
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, 170, -1));
+        txtVelocidade.setEditable(false);
+        getContentPane().add(txtVelocidade);
+        txtVelocidade.setBounds(10, 330, 170, 22);
 
-        jTextField6.setEditable(false);
-        jTextField6.setText("Multiplicador ataque - 2 a 10");
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 170, -1));
+        txtPontosVida.setEditable(false);
+        txtPontosVida.setText("100");
+        txtPontosVida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPontosVidaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtPontosVida);
+        txtPontosVida.setBounds(10, 90, 170, 22);
+
+        txtPontosAtaque.setEditable(false);
+        txtPontosAtaque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPontosAtaqueActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtPontosAtaque);
+        txtPontosAtaque.setBounds(10, 150, 170, 22);
+
+        txtPontosDefesa.setEditable(false);
+        txtPontosDefesa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPontosDefesaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtPontosDefesa);
+        txtPontosDefesa.setBounds(10, 210, 170, 22);
+
+        txtForca.setEditable(false);
+        txtForca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtForcaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtForca);
+        txtForca.setBounds(10, 270, 170, 22);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+    private void txtPontosVidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPontosVidaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
+    }//GEN-LAST:event_txtPontosVidaActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Guerreira guerreira = new Guerreira();
+
+        guerreira.setNome(txtNome.getText());
+        guerreira.setPontosVida(Integer.parseInt(txtPontosVida.getText()));
+        guerreira.setPontosAtaque(Integer.parseInt(txtPontosAtaque.getText()));
+        guerreira.setPontosDefesa(Integer.parseInt(txtPontosDefesa.getText()));
+        guerreira.setForca(Integer.parseInt(txtForca.getText()));
+        guerreira.setVelocidade(Integer.parseInt(txtVelocidade.getText()));
+
+        salvar(guerreira);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void txtPontosAtaqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPontosAtaqueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPontosAtaqueActionPerformed
+
+    private void txtPontosDefesaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPontosDefesaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPontosDefesaActionPerformed
+
+    private void txtForcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtForcaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtForcaActionPerformed
+
+    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomeActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CadastroGuerreira.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CadastroGuerreira.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CadastroGuerreira.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CadastroGuerreira.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -179,11 +206,37 @@ public class CadastroGuerreira extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField txtForca;
+    private javax.swing.JTextField txtNome;
+    private javax.swing.JTextField txtPontosAtaque;
+    private javax.swing.JTextField txtPontosDefesa;
+    private javax.swing.JTextField txtPontosVida;
+    private javax.swing.JTextField txtVelocidade;
     // End of variables declaration//GEN-END:variables
+
+    private void salvar(Guerreira guerreira) {
+        String sql = "INSERT "
+                + "INTO `tb_guerreiro` "
+                + "(`nome`, `ponto_vida`, `ponto_ataque`, `ponto_defesa`, `forca`, `velocidade`) "
+                + "VALUES "
+                + "(?, ?, ?, ?, ?, ?);";
+        try {
+                PreparedStatement preparacaoDaInstrucao = Conexao.getConexao().prepareStatement(sql);
+                preparacaoDaInstrucao.setString(1, guerreira.getNome());
+                preparacaoDaInstrucao.setInt(2, guerreira.getPontosVida());
+                preparacaoDaInstrucao.setInt(3, guerreira.getPontosAtaque());
+                preparacaoDaInstrucao.setInt(4, guerreira.getPontosDefesa());
+                preparacaoDaInstrucao.setInt(5, guerreira.getForca());
+                preparacaoDaInstrucao.setInt(6, guerreira.getVelocidade());
+                preparacaoDaInstrucao.executeUpdate();
+                JOptionPane.showMessageDialog(this, "Salvo com sucesso!");
+                this.dispose(); // libera a memória da janela
+                new TelaDeCadastro().setVisible(true); // exibe a tela inicial
+        } catch (Exception e) {
+                e.printStackTrace();
+                JOptionPane.showMessageDialog(this, "Erro ao salvar!");
+        }
+    }
+
+
 }

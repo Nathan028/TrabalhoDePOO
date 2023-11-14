@@ -4,16 +4,16 @@
  */
 
 
-package br.edu.ifpr.conexao;
+package br.edu.ifpr.thecoxinhagame.conexao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conexao {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/nome_banco";
+    private static final String URL = "jdbc:mysql://localhost:3306/bd_the_coxinha_game";
     private static final String usuario = "aluno";
-    private static final String senha = "mysql";
+    private static final String senha = "";
     private static Connection conexao = null;
 
     public static Connection getConexao() {
