@@ -27,10 +27,8 @@ public class CampoDeBatalha extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel8 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
@@ -46,10 +44,6 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/guerreiro fofo.png"))); // NOI18N
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(0, 70, 220, 240);
-
         jTextField1.setEditable(false);
         jTextField1.setText("Phoebe");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -58,15 +52,11 @@ public class CampoDeBatalha extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(20, 340, 190, 22);
+        jTextField1.setBounds(40, 110, 190, 22);
 
         jButton1.setText("Começar");
         getContentPane().add(jButton1);
-        jButton1.setBounds(270, 560, 110, 20);
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/Mago Fofo.png"))); // NOI18N
-        getContentPane().add(jLabel9);
-        jLabel9.setBounds(430, 80, 225, 225);
+        jButton1.setBounds(290, 330, 110, 20);
 
         jTextField2.setEditable(false);
         jTextField2.setText("100");
@@ -76,27 +66,27 @@ public class CampoDeBatalha extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField2);
-        jTextField2.setBounds(20, 370, 190, 22);
+        jTextField2.setBounds(40, 140, 190, 22);
 
         jTextField3.setEditable(false);
         jTextField3.setText("20 a 25");
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(20, 400, 190, 22);
+        jTextField3.setBounds(40, 170, 190, 22);
 
         jTextField4.setEditable(false);
         jTextField4.setText("10 a15");
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(20, 430, 190, 22);
+        jTextField4.setBounds(40, 200, 190, 22);
 
         jTextField5.setEditable(false);
         jTextField5.setText("Multiplicador ataque - 2 a 10");
         getContentPane().add(jTextField5);
-        jTextField5.setBounds(20, 460, 190, 22);
+        jTextField5.setBounds(40, 230, 190, 22);
 
         jTextField6.setEditable(false);
         jTextField6.setText("Multiplicador defesa - 2 a 10");
         getContentPane().add(jTextField6);
-        jTextField6.setBounds(20, 490, 190, 22);
+        jTextField6.setBounds(40, 260, 190, 22);
 
         jTextField7.setEditable(false);
         jTextField7.setText("Saori");
@@ -106,7 +96,7 @@ public class CampoDeBatalha extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField7);
-        jTextField7.setBounds(440, 340, 190, 22);
+        jTextField7.setBounds(460, 110, 190, 22);
 
         jTextField8.setEditable(false);
         jTextField8.setText("100");
@@ -116,27 +106,27 @@ public class CampoDeBatalha extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField8);
-        jTextField8.setBounds(440, 370, 190, 22);
+        jTextField8.setBounds(460, 140, 190, 22);
 
         jTextField9.setEditable(false);
         jTextField9.setText("20 a 25");
         getContentPane().add(jTextField9);
-        jTextField9.setBounds(440, 400, 190, 22);
+        jTextField9.setBounds(460, 170, 190, 22);
 
         jTextField10.setEditable(false);
         jTextField10.setText("5 a 10");
         getContentPane().add(jTextField10);
-        jTextField10.setBounds(440, 430, 190, 22);
+        jTextField10.setBounds(460, 200, 190, 22);
 
         jTextField11.setEditable(false);
         jTextField11.setText("Multiplicador ataque - 2 a 10");
         getContentPane().add(jTextField11);
-        jTextField11.setBounds(440, 460, 190, 22);
+        jTextField11.setBounds(460, 230, 190, 22);
 
         jTextField12.setEditable(false);
         jTextField12.setText("Multiplicador defesa - 2 a 10");
         getContentPane().add(jTextField12);
-        jTextField12.setBounds(440, 490, 190, 22);
+        jTextField12.setBounds(460, 260, 190, 22);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -161,92 +151,7 @@ public class CampoDeBatalha extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CampoDeBatalha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CampoDeBatalha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CampoDeBatalha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CampoDeBatalha.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
+       
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -257,8 +162,6 @@ public class CampoDeBatalha extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
