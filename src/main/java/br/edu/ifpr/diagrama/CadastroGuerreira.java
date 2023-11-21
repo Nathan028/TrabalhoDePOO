@@ -216,7 +216,7 @@ public class CadastroGuerreira extends javax.swing.JFrame {
 
     private void salvar(Guerreira guerreira) {
         String sql = "INSERT "
-                + "INTO `tb_guerreiro` "
+                + "INTO `tb_guerreira` "
                 + "(`nome`, `ponto_vida`, `ponto_ataque`, `ponto_defesa`, `forca`, `velocidade`) "
                 + "VALUES "
                 + "(?, ?, ?, ?, ?, ?);";

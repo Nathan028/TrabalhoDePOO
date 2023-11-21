@@ -26,11 +26,11 @@ public class CadastroMago extends javax.swing.JFrame {
         int defesa = (int) (Math.random() * (15 - 10 + 1) + 10);
         txtPontosDefesa.setText("" + defesa);
 
-        int forca = (int) (Math.random() * (10 - 2 + 1) + 2);
-        txtForca.setText("" + forca);
+        int inteligencia = (int) (Math.random() * (10 - 2 + 1) + 2);
+        txtInteligencia.setText("" + inteligencia);
 
-        int velocidade = (int) (Math.random() * (10 - 2 + 1) + 2);
-        txtVelocidade.setText("" + velocidade);
+        int recuperacao = (int) (Math.random() * (10 - 2 + 1) + 2);
+        txtRecuperacao.setText("" + recuperacao);
         
     }
 
@@ -52,11 +52,11 @@ public class CadastroMago extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         txtNome = new javax.swing.JTextField();
-        txtVelocidade = new javax.swing.JTextField();
+        txtRecuperacao = new javax.swing.JTextField();
         txtPontosVida = new javax.swing.JTextField();
         txtPontosAtaque = new javax.swing.JTextField();
         txtPontosDefesa = new javax.swing.JTextField();
-        txtForca = new javax.swing.JTextField();
+        txtInteligencia = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -77,13 +77,13 @@ public class CadastroMago extends javax.swing.JFrame {
         getContentPane().add(jLabel5);
         jLabel5.setBounds(10, 190, 91, 16);
 
-        jLabel6.setText("Força:");
+        jLabel6.setText("Inteligencia");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(10, 250, 32, 16);
+        jLabel6.setBounds(10, 250, 70, 16);
 
-        jLabel7.setText("Velocidade:");
+        jLabel7.setText("Recuperação");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(10, 310, 61, 16);
+        jLabel7.setBounds(10, 310, 80, 16);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/guerreiro fofo.png"))); // NOI18N
         getContentPane().add(jLabel8);
@@ -107,9 +107,14 @@ public class CadastroMago extends javax.swing.JFrame {
         getContentPane().add(txtNome);
         txtNome.setBounds(10, 30, 170, 22);
 
-        txtVelocidade.setEditable(false);
-        getContentPane().add(txtVelocidade);
-        txtVelocidade.setBounds(10, 330, 170, 22);
+        txtRecuperacao.setEditable(false);
+        txtRecuperacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRecuperacaoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtRecuperacao);
+        txtRecuperacao.setBounds(10, 330, 170, 22);
 
         txtPontosVida.setEditable(false);
         txtPontosVida.setText("100");
@@ -139,14 +144,14 @@ public class CadastroMago extends javax.swing.JFrame {
         getContentPane().add(txtPontosDefesa);
         txtPontosDefesa.setBounds(10, 210, 170, 22);
 
-        txtForca.setEditable(false);
-        txtForca.addActionListener(new java.awt.event.ActionListener() {
+        txtInteligencia.setEditable(false);
+        txtInteligencia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtForcaActionPerformed(evt);
+                txtInteligenciaActionPerformed(evt);
             }
         });
-        getContentPane().add(txtForca);
-        txtForca.setBounds(10, 270, 170, 22);
+        getContentPane().add(txtInteligencia);
+        txtInteligencia.setBounds(10, 270, 170, 22);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -156,16 +161,16 @@ public class CadastroMago extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPontosVidaActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Guerreira guerreira = new Guerreira();
+        Mago mago = new Mago();
 
-        guerreira.setNome(txtNome.getText());
-        guerreira.setPontosVida(Integer.parseInt(txtPontosVida.getText()));
-        guerreira.setPontosAtaque(Integer.parseInt(txtPontosAtaque.getText()));
-        guerreira.setPontosDefesa(Integer.parseInt(txtPontosDefesa.getText()));
-        guerreira.setForca(Integer.parseInt(txtForca.getText()));
-        guerreira.setVelocidade(Integer.parseInt(txtVelocidade.getText()));
+        mago.setNome(txtNome.getText());
+        mago.setPontosVida(Integer.parseInt(txtPontosVida.getText()));
+        mago.setPontosAtaque(Integer.parseInt(txtPontosAtaque.getText()));
+        mago.setPontosDefesa(Integer.parseInt(txtPontosDefesa.getText()));
+        mago.setInteligencia(Integer.parseInt(txtInteligencia.getText()));
+        mago.setRecuperacao(Integer.parseInt(txtRecuperacao.getText()));
 
-        salvar(guerreira);
+        salvar(mago);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtPontosAtaqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPontosAtaqueActionPerformed
@@ -176,13 +181,17 @@ public class CadastroMago extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPontosDefesaActionPerformed
 
-    private void txtForcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtForcaActionPerformed
+    private void txtInteligenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInteligenciaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtForcaActionPerformed
+    }//GEN-LAST:event_txtInteligenciaActionPerformed
 
     private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNomeActionPerformed
+
+    private void txtRecuperacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRecuperacaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtRecuperacaoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -206,28 +215,28 @@ public class CadastroMago extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JTextField txtForca;
+    private javax.swing.JTextField txtInteligencia;
     private javax.swing.JTextField txtNome;
     private javax.swing.JTextField txtPontosAtaque;
     private javax.swing.JTextField txtPontosDefesa;
     private javax.swing.JTextField txtPontosVida;
-    private javax.swing.JTextField txtVelocidade;
+    private javax.swing.JTextField txtRecuperacao;
     // End of variables declaration//GEN-END:variables
 
-    private void salvar(Guerreira guerreira) {
+    private void salvar(Mago mago) {
         String sql = "INSERT "
-                + "INTO `tb_guerreiro` "
-                + "(`nome`, `ponto_vida`, `ponto_ataque`, `ponto_defesa`, `forca`, `velocidade`) "
+                + "INTO `tb_mago` "
+                + "(`nome`, `ponto_vida`, `ponto_ataque`, `ponto_defesa`, `inteligencia`, `recuperacao`) "
                 + "VALUES "
                 + "(?, ?, ?, ?, ?, ?);";
         try {
                 PreparedStatement preparacaoDaInstrucao = Conexao.getConexao().prepareStatement(sql);
-                preparacaoDaInstrucao.setString(1, guerreira.getNome());
-                preparacaoDaInstrucao.setInt(2, guerreira.getPontosVida());
-                preparacaoDaInstrucao.setInt(3, guerreira.getPontosAtaque());
-                preparacaoDaInstrucao.setInt(4, guerreira.getPontosDefesa());
-                preparacaoDaInstrucao.setInt(5, guerreira.getForca());
-                preparacaoDaInstrucao.setInt(6, guerreira.getVelocidade());
+                preparacaoDaInstrucao.setString(1, mago.getNome());
+                preparacaoDaInstrucao.setInt(2, mago.getPontosVida());
+                preparacaoDaInstrucao.setInt(3, mago.getPontosAtaque());
+                preparacaoDaInstrucao.setInt(4, mago.getPontosDefesa());
+                preparacaoDaInstrucao.setInt(5, mago.getInteligencia());
+                preparacaoDaInstrucao.setInt(6, mago.getRecuperacao());
                 preparacaoDaInstrucao.executeUpdate();
                 JOptionPane.showMessageDialog(this, "Salvo com sucesso!");
                 this.dispose(); // libera a memória da janela

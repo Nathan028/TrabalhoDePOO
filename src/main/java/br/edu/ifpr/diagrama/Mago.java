@@ -4,6 +4,10 @@
  */
 package br.edu.ifpr.diagrama;
 
+import br.edu.ifpr.thecoxinhagame.conexao.Conexao;
+import java.sql.PreparedStatement;
+import java.util.Random;
+
 /**
  *
  * @author Aluno
@@ -15,6 +19,15 @@ public class Mago {
     private int pontosDefesa;
     private int inteligencia;
     private int recuperacao;
+    
+      public Mago(String nome) {
+        this.nome = nome;
+        this.pontosAtaque = new Random().nextInt(6) + 20; // Random entre 20 e 25
+        this.pontosDefesa = new Random().nextInt(6) + 5; // Random entre 5 e 10
+        this.inteligencia = (this.pontosAtaque - 2) * (new Random().nextInt(9) + 2); // Random entre 2 e 10
+        this.recuperacao = (this.pontosAtaque - 2) * (new Random().nextInt(9) + 2); // Random entre 2 e 10
+        this.pontosVida = 80; // Pode ser um valor padrão ou também random, como preferir
+    }
 
     public String getNome() {
         return nome;
@@ -63,10 +76,21 @@ public class Mago {
     public void setRecuperacao(int recuperacao) {
         this.recuperacao = recuperacao;
     }
+    
+     public void receberDano(int dano) {
+        this.pontosVida -= dano;
+        System.out.println(nome + " recebeu " + dano + " de dano. Vida restante: " + pontosVida);
+    }
+
+    public int conjurarMagia() {
+        System.out.println(nome + " conjura uma magia com poder " + pontosAtaque);
+        return pontosAtaque;
+    }
 
     @Override
     public String toString() {
-        return "Guerreiro{" + "nome=" + nome + ", pontosVida=" + pontosVida + ", pontosAtaque=" + pontosAtaque + ", pontosDefesa=" + pontosDefesa + ", inteligencia=" + inteligencia + ", recuperacao=" + recuperacao + '}';
+        return "Mago{" + "nome=" + nome + ", pontosVida=" + pontosVida + 
+                ", pontosAtaque=" + pontosAtaque + ", pontosDefesa=" + pontosDefesa + ", inteligencia=" + inteligencia + ", recuperacao=" + recuperacao + '}';
     }
     
 }

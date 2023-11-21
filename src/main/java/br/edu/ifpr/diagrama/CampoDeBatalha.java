@@ -1,21 +1,27 @@
-package br.edu.ifpr.diagrama;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+package br.edu.ifpr.diagrama;
 
+import br.edu.ifpr.thelaststanding.conexao.Conexao;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+import javax.swing.*;
 /**
  *
  * @author Aluno
  */
 public class CampoDeBatalha extends javax.swing.JFrame {
-
+    
+    private Guerreira guerreira;
+    private Mago mago;
     /**
      * Creates new form CadastroPersonagem
      */
     public CampoDeBatalha() {
         initComponents();
+        iniciarBatalha();
     }
 
     /**
@@ -74,7 +80,7 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         jTextField3.setBounds(40, 170, 190, 22);
 
         jTextField4.setEditable(false);
-        jTextField4.setText("10 a15");
+        jTextField4.setText("5 a 10");
         getContentPane().add(jTextField4);
         jTextField4.setBounds(40, 200, 190, 22);
 
@@ -114,7 +120,12 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         jTextField9.setBounds(460, 170, 190, 22);
 
         jTextField10.setEditable(false);
-        jTextField10.setText("5 a 10");
+        jTextField10.setText("10 a 15");
+        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField10ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jTextField10);
         jTextField10.setBounds(460, 200, 190, 22);
 
@@ -147,6 +158,10 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField8ActionPerformed
 
+    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField10ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -175,4 +190,45 @@ public class CampoDeBatalha extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     // End of variables declaration//GEN-END:variables
+
+private void iniciarBatalha() {
+        guerreira = new Guerreira("Phoebe");
+        mago = new Mago("Saori");
+
+        exibirDadosPersonagem(jTextField1, guerreira);
+        exibirDadosPersonagem(jTextField7, mago);
+
+        jButton1.addActionListener(evt -> {
+            realizarRodada();
+        });
+    }
+
+    private void realizarRodada() {
+        int danoGuerreira = guerreira.atacar();
+        mago.receberDano(danoGuerreira);
+        exibirDadosPersonagem(jTextField7, mago);
+
+        if (mago.getPontosVida() <= 0) {
+            JOptionPane.showMessageDialog(this, guerreira.getNome() + " venceu a batalha!");
+            System.exit(0);
+        }
+
+        int danoMago = mago.conjurarMagia();
+        guerreira.receberDano(danoMago);
+        exibirDadosPersonagem(jTextField1, guerreira);
+
+        if (guerreira.getPontosVida() <= 0) {
+            JOptionPane.showMessageDialog(this, mago.getNome() + " venceu a batalha!");
+            System.exit(0);
+        }
+    }
+
+    private void exibirDadosPersonagem(JTextField textField, Personagem personagem) {
+        textField.setText(personagem.getNome() + "\n"
+                + "Pontos de Vida: " + personagem.getPontosVida() + "\n"
+                + "Pontos de Ataque: " + personagem.getPontosAtaque() + "\n"
+                + "Pontos de Defesa: " + personagem.getPontosDefesa() + "\n"
+                + "Força: " + personagem.getForca() + "\n"
+                + "Velocidade: " + personagem.getVelocidade());
+    }
 }

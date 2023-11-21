@@ -4,6 +4,10 @@
  */
 package br.edu.ifpr.diagrama;
 
+import br.edu.ifpr.thecoxinhagame.conexao.Conexao;
+import java.sql.PreparedStatement;
+import java.util.Random;
+
 /**
  *
  * @author Aluno
@@ -15,6 +19,15 @@ public class Guerreira {
     private int pontosDefesa;
     private int forca;
     private int velocidade;
+    
+    public Guerreira(String nome) {
+        this.nome = nome;
+        this.pontosAtaque = new Random().nextInt(6) + 20; // Random entre 20 e 25
+        this.pontosDefesa = new Random().nextInt(6) + 10; // Random entre 10 e 15
+        this.forca = (this.pontosAtaque - 2) * (new Random().nextInt(9) + 2); // Random entre 2 e 10
+        this.velocidade = (this.pontosAtaque - 2) * (new Random().nextInt(9) + 2); // Random entre 2 e 10
+        this.pontosVida = 100; // Pode ser um valor padrão ou também random, como preferir
+    }
 
     public String getNome() {
         return nome;
@@ -63,10 +76,21 @@ public class Guerreira {
     public void setVelocidade(int velocidade) {
         this.velocidade = velocidade;
     }
+    
+     public void receberDano(int dano) {
+        this.pontosVida -= dano;
+        System.out.println(nome + " recebeu " + dano + " de dano. Vida restante: " + pontosVida);
+    }
+
+    public int atacar() {
+        System.out.println(nome + " ataca com força " + pontosAtaque);
+        return pontosAtaque;
+    }
 
     @Override
     public String toString() {
-        return "Guerreiro{" + "nome=" + nome + ", pontosVida=" + pontosVida + ", pontosAtaque=" + pontosAtaque + ", pontosDefesa=" + pontosDefesa + ", forca=" + forca + ", velocidade=" + velocidade + '}';
+        return "Guerreira{" + "nome=" + nome + ", pontosVida=" + pontosVida + ", pontosAtaque=" + 
+        pontosAtaque + ", pontosDefesa=" + pontosDefesa + ", forca=" + forca + ", velocidade=" + velocidade + '}';
     }
     
 }

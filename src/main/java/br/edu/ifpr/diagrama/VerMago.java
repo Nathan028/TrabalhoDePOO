@@ -15,31 +15,31 @@ import javax.swing.JOptionPane;
  *
  * @author Aluno
  */
-public class VerGuerreira extends javax.swing.JFrame {
+public class VerMago extends javax.swing.JFrame {
 
     /**
      * Creates new form CadastroPersonagem
      */
-    public VerGuerreira() {
+    public VerMago() {
         initComponents();
         
-        Guerreira guerreira = buscarGuerreira();
+        Mago mago = buscarMago();
         
-        txtNome.setText(guerreira.getNome());
+        txtNome.setText(mago.getNome());
         
-        int ataque = guerreira.getPontosAtaque();
+        int ataque = mago.getPontosAtaque();
         txtPontosAtaque.setText("" + ataque);
 
-        int defesa = guerreira.getPontosDefesa();
+        int defesa = mago.getPontosDefesa();
         txtPontosDefesa.setText("" + defesa);
 
-        int forca = guerreira.getForca();
-        txtForca.setText("" + forca);
+        int inteligencia = mago.getInteligencia();
+        txtInteligencia.setText("" + inteligencia);
 
-        int velocidade = guerreira.getVelocidade();
-        txtVelocidade.setText("" + velocidade);
+        int recuperacao = mago.getRecuperacao();
+        txtRecuperacao.setText("" + recuperacao);
         
-        imprimeGuerreiras();
+        imprimeMagos();
     }
 
     /**
@@ -55,16 +55,16 @@ public class VerGuerreira extends javax.swing.JFrame {
         txtPontosVida = new javax.swing.JLabel();
         Ataque = new javax.swing.JLabel();
         Defesa = new javax.swing.JLabel();
-        Forca = new javax.swing.JLabel();
-        Velocidade = new javax.swing.JLabel();
+        Inteligencia = new javax.swing.JLabel();
+        Recuperacao = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         salvar = new javax.swing.JButton();
         txtNome = new javax.swing.JTextField();
-        txtVelocidade = new javax.swing.JTextField();
+        txtRecuperacao = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         txtPontosAtaque = new javax.swing.JTextField();
         txtPontosDefesa = new javax.swing.JTextField();
-        txtForca = new javax.swing.JTextField();
+        txtInteligencia = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -85,13 +85,13 @@ public class VerGuerreira extends javax.swing.JFrame {
         getContentPane().add(Defesa);
         Defesa.setBounds(10, 190, 91, 16);
 
-        Forca.setText("Força:");
-        getContentPane().add(Forca);
-        Forca.setBounds(10, 250, 32, 16);
+        Inteligencia.setText("Inteligência:");
+        getContentPane().add(Inteligencia);
+        Inteligencia.setBounds(10, 250, 70, 16);
 
-        Velocidade.setText("Velocidade:");
-        getContentPane().add(Velocidade);
-        Velocidade.setBounds(10, 310, 61, 16);
+        Recuperacao.setText("Recuperação:");
+        getContentPane().add(Recuperacao);
+        Recuperacao.setBounds(10, 310, 80, 16);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/guerreiro fofo.png"))); // NOI18N
         getContentPane().add(jLabel8);
@@ -115,9 +115,9 @@ public class VerGuerreira extends javax.swing.JFrame {
         getContentPane().add(txtNome);
         txtNome.setBounds(10, 30, 170, 22);
 
-        txtVelocidade.setEditable(false);
-        getContentPane().add(txtVelocidade);
-        txtVelocidade.setBounds(10, 330, 170, 22);
+        txtRecuperacao.setEditable(false);
+        getContentPane().add(txtRecuperacao);
+        txtRecuperacao.setBounds(10, 330, 170, 22);
 
         jTextField3.setEditable(false);
         jTextField3.setText("100");
@@ -142,14 +142,14 @@ public class VerGuerreira extends javax.swing.JFrame {
         getContentPane().add(txtPontosDefesa);
         txtPontosDefesa.setBounds(10, 210, 170, 22);
 
-        txtForca.setEditable(false);
-        txtForca.addActionListener(new java.awt.event.ActionListener() {
+        txtInteligencia.setEditable(false);
+        txtInteligencia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtForcaActionPerformed(evt);
+                txtInteligenciaActionPerformed(evt);
             }
         });
-        getContentPane().add(txtForca);
-        txtForca.setBounds(10, 270, 170, 22);
+        getContentPane().add(txtInteligencia);
+        txtInteligencia.setBounds(10, 270, 170, 22);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -159,16 +159,16 @@ public class VerGuerreira extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarActionPerformed
-         Guerreira guerreira = new Guerreira();
+          Mago mago = new Mago();
 
-        guerreira.setNome(txtNome.getText());
-        guerreira.setPontosVida(Integer.parseInt(txtPontosVida.getText()));
-        guerreira.setPontosAtaque(Integer.parseInt(txtPontosAtaque.getText()));
-        guerreira.setPontosDefesa(Integer.parseInt(txtPontosDefesa.getText()));
-        guerreira.setForca(Integer.parseInt(txtForca.getText()));
-        guerreira.setVelocidade(Integer.parseInt(txtVelocidade.getText()));
+        mago.setNome(txtNome.getText());
+        mago.setPontosVida(Integer.parseInt(txtPontosVida.getText()));
+        mago.setPontosAtaque(Integer.parseInt(txtPontosAtaque.getText()));
+        mago.setPontosDefesa(Integer.parseInt(txtPontosDefesa.getText()));
+        mago.setInteligencia(Integer.parseInt(txtInteligencia.getText()));
+        mago.setRecuperacao(Integer.parseInt(txtRecuperacao.getText()));
 
-        salvar(guerreira);
+        salvar(mago);
     }//GEN-LAST:event_salvarActionPerformed
 
     private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
@@ -179,9 +179,9 @@ public class VerGuerreira extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtPontosAtaqueActionPerformed
 
-    private void txtForcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtForcaActionPerformed
+    private void txtInteligenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInteligenciaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtForcaActionPerformed
+    }//GEN-LAST:event_txtInteligenciaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,7 +192,7 @@ public class VerGuerreira extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VerGuerreira().setVisible(true);
+                new VerMago().setVisible(true);
             }
         });
     }
@@ -200,34 +200,34 @@ public class VerGuerreira extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Ataque;
     private javax.swing.JLabel Defesa;
-    private javax.swing.JLabel Forca;
+    private javax.swing.JLabel Inteligencia;
     private javax.swing.JLabel Nome;
-    private javax.swing.JLabel Velocidade;
+    private javax.swing.JLabel Recuperacao;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JButton salvar;
-    private javax.swing.JTextField txtForca;
+    private javax.swing.JTextField txtInteligencia;
     private javax.swing.JTextField txtNome;
     private javax.swing.JTextField txtPontosAtaque;
     private javax.swing.JTextField txtPontosDefesa;
     private javax.swing.JLabel txtPontosVida;
-    private javax.swing.JTextField txtVelocidade;
+    private javax.swing.JTextField txtRecuperacao;
     // End of variables declaration//GEN-END:variables
 
-     private void salvar(Guerreira guerreira) {
+     private void salvar(Mago mago) {
         String sql = "INSERT "
-                + "INTO `tb_guerreira` "
-                + "(`nome`, `ponto_vida`, `ponto_ataque`, `ponto_defesa`, `forca`, `velocidade`) "
+                + "INTO `tb_mago` "
+                + "(`nome`, `ponto_vida`, `ponto_ataque`, `ponto_defesa`, `inteligencia`, `recuperacao`) "
                 + "VALUES "
                 + "(?, ?, ?, ?, ?, ?);";
         try {
                 PreparedStatement preparacaoDaInstrucao = Conexao.getConexao().prepareStatement(sql);
-                preparacaoDaInstrucao.setString(1, guerreira.getNome());
-                preparacaoDaInstrucao.setInt(2, guerreira.getPontosVida());
-                preparacaoDaInstrucao.setInt(3, guerreira.getPontosAtaque());
-                preparacaoDaInstrucao.setInt(4, guerreira.getPontosDefesa());
-                preparacaoDaInstrucao.setInt(5, guerreira.getForca());
-                preparacaoDaInstrucao.setInt(6, guerreira.getVelocidade());
+                preparacaoDaInstrucao.setString(1, mago.getNome());
+                preparacaoDaInstrucao.setInt(2, mago.getPontosVida());
+                preparacaoDaInstrucao.setInt(3, mago.getPontosAtaque());
+                preparacaoDaInstrucao.setInt(4, mago.getPontosDefesa());
+                preparacaoDaInstrucao.setInt(5, mago.getInteligencia());
+                preparacaoDaInstrucao.setInt(6, mago.getRecuperacao());
                 preparacaoDaInstrucao.executeUpdate();
                 JOptionPane.showMessageDialog(this, "Salvo com sucesso!");
                 this.dispose(); // libera a memória da janela
@@ -238,11 +238,11 @@ public class VerGuerreira extends javax.swing.JFrame {
         }
     }
      
-     private Guerreira buscarGuerreira() {
+     private Mago buscarMago() {
         
-        Guerreira guerreira = new Guerreira();
+        Mago mago = new Mago();
         
-        String sql = "SELECT * FROM `tb_guerreira`;";
+        String sql = "SELECT * FROM `tb_mago`;";
         
         
         
@@ -251,24 +251,24 @@ public class VerGuerreira extends javax.swing.JFrame {
             ResultSet resultado = preparacaoDaInstrucao.executeQuery();
             resultado.next();
             
-            guerreira.setNome(resultado.getString("nome"));
-            guerreira.setPontosVida(resultado.getInt("ponto_vida"));
-            guerreira.setPontosAtaque(resultado.getInt("ponto_ataque"));
-            guerreira.setPontosDefesa(resultado.getInt("ponto_defesa"));
-            guerreira.setForca(resultado.getInt("forca"));
-            guerreira.setVelocidade(resultado.getInt("velocidade"));
+            mago.setNome(resultado.getString("nome"));
+            mago.setPontosVida(resultado.getInt("ponto_vida"));
+            mago.setPontosAtaque(resultado.getInt("ponto_ataque"));
+            mago.setPontosDefesa(resultado.getInt("ponto_defesa"));
+            mago.setInteligencia(resultado.getInt("inteligencia"));
+            mago.setRecuperacao(resultado.getInt("recuperacao"));
         } catch (SQLException ex) {
-            Logger.getLogger(VerGuerreira.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(VerMago.class.getName()).log(Level.SEVERE, null, ex);
             ex.printStackTrace();
         }
-        return guerreira;
+        return mago;
     }
     
-    private void imprimeGuerreiras() {
+    private void imprimeMagos() {
         
-        Guerreira guerreira = new Guerreira();
+        Mago mago = new Mago();
         
-        String sql = "SELECT * FROM `tb_guerreira`;";
+        String sql = "SELECT * FROM `tb_mago`;";
         
         
         
@@ -277,16 +277,16 @@ public class VerGuerreira extends javax.swing.JFrame {
             ResultSet resultado = preparacaoDaInstrucao.executeQuery();
             
             while(resultado.next()){
-                guerreira.setNome(resultado.getString("nome"));
-                guerreira.setPontosVida(resultado.getInt("ponto_vida"));
-                guerreira.setPontosAtaque(resultado.getInt("ponto_ataque"));
-                guerreira.setPontosDefesa(resultado.getInt("ponto_defesa"));
-                guerreira.setForca(resultado.getInt("forca"));
-                guerreira.setVelocidade(resultado.getInt("velocidade"));
-                System.out.println(guerreira.toString());
+                mago.setNome(resultado.getString("nome"));
+                mago.setPontosVida(resultado.getInt("ponto_vida"));
+                mago.setPontosAtaque(resultado.getInt("ponto_ataque"));
+                mago.setPontosDefesa(resultado.getInt("ponto_defesa"));
+                mago.setInteligencia(resultado.getInt("inteligencia"));
+                mago.setRecuperacao(resultado.getInt("recuperacao"));
+                System.out.println(mago.toString());
             }
         } catch (SQLException ex) {
-            Logger.getLogger(VerGuerreira.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(VerMago.class.getName()).log(Level.SEVERE, null, ex);
             ex.printStackTrace();
         }
     }
