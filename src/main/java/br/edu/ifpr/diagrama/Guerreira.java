@@ -4,22 +4,20 @@
  */
 package br.edu.ifpr.diagrama;
 
-import br.edu.ifpr.thecoxinhagame.conexao.Conexao;
-import java.sql.PreparedStatement;
 import java.util.Random;
 
 /**
  *
  * @author Aluno
  */
-public class Guerreira {
-     private String nome;
-    private int pontosVida;
-    private int pontosAtaque;
-    private int pontosDefesa;
+public class Guerreira extends Personagem {
+
     private int forca;
     private int velocidade;
-    
+
+    public Guerreira() {
+    }
+
     public Guerreira(String nome) {
         this.nome = nome;
         this.pontosAtaque = new Random().nextInt(6) + 20; // Random entre 20 e 25
@@ -27,38 +25,6 @@ public class Guerreira {
         this.forca = (this.pontosAtaque - 2) * (new Random().nextInt(9) + 2); // Random entre 2 e 10
         this.velocidade = (this.pontosAtaque - 2) * (new Random().nextInt(9) + 2); // Random entre 2 e 10
         this.pontosVida = 100; // Pode ser um valor padrão ou também random, como preferir
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public int getPontosVida() {
-        return pontosVida;
-    }
-
-    public void setPontosVida(int pontosVida) {
-        this.pontosVida = pontosVida;
-    }
-
-    public int getPontosAtaque() {
-        return pontosAtaque;
-    }
-
-    public void setPontosAtaque(int pontosAtaque) {
-        this.pontosAtaque = pontosAtaque;
-    }
-
-    public int getPontosDefesa() {
-        return pontosDefesa;
-    }
-
-    public void setPontosDefesa(int pontosDefesa) {
-        this.pontosDefesa = pontosDefesa;
     }
 
     public int getForca() {
@@ -76,8 +42,8 @@ public class Guerreira {
     public void setVelocidade(int velocidade) {
         this.velocidade = velocidade;
     }
-    
-     public void receberDano(int dano) {
+
+    public void receberDano(int dano) {
         this.pontosVida -= dano;
         System.out.println(nome + " recebeu " + dano + " de dano. Vida restante: " + pontosVida);
     }
@@ -89,8 +55,8 @@ public class Guerreira {
 
     @Override
     public String toString() {
-        return "Guerreira{" + "nome=" + nome + ", pontosVida=" + pontosVida + ", pontosAtaque=" + 
-        pontosAtaque + ", pontosDefesa=" + pontosDefesa + ", forca=" + forca + ", velocidade=" + velocidade + '}';
+        return "Guerreira{" + "nome=" + nome + ", pontosVida=" + pontosVida + ", pontosAtaque="
+                + pontosAtaque + ", pontosDefesa=" + pontosDefesa + ", forca=" + forca + ", velocidade=" + velocidade + '}';
     }
-    
+
 }

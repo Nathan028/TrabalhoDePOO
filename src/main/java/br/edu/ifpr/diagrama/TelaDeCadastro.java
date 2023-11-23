@@ -41,7 +41,7 @@ public class TelaDeCadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(CadastroGuerreira);
-        CadastroGuerreira.setBounds(10, 50, 130, 23);
+        CadastroGuerreira.setBounds(10, 50, 150, 20);
 
         CadastroMago.setText("Cadastro Mago");
         CadastroMago.addActionListener(new java.awt.event.ActionListener() {
@@ -50,11 +50,16 @@ public class TelaDeCadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(CadastroMago);
-        CadastroMago.setBounds(10, 20, 130, 23);
+        CadastroMago.setBounds(10, 20, 150, 20);
 
         Batalha.setText("Batalha");
+        Batalha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BatalhaActionPerformed(evt);
+            }
+        });
         getContentPane().add(Batalha);
-        Batalha.setBounds(40, 120, 72, 23);
+        Batalha.setBounds(40, 120, 90, 20);
 
         CadastroItem.setText("Cadastro de Item");
         CadastroItem.addActionListener(new java.awt.event.ActionListener() {
@@ -63,13 +68,15 @@ public class TelaDeCadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(CadastroItem);
-        CadastroItem.setBounds(10, 80, 130, 23);
+        CadastroItem.setBounds(10, 80, 150, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void CadastroMagoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroMagoActionPerformed
-        // TODO add your handling code here:
+        CadastroMago cadastroMago = new CadastroMago();
+        cadastroMago.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_CadastroMagoActionPerformed
 
     private void CadastroItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroItemActionPerformed
@@ -81,6 +88,12 @@ public class TelaDeCadastro extends javax.swing.JFrame {
         cadastroGuerreira.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_CadastroGuerreiraActionPerformed
+
+    private void BatalhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatalhaActionPerformed
+        CampoDeBatalha campoDeBatalha = new CampoDeBatalha();
+        campoDeBatalha.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_BatalhaActionPerformed
 
     /**
      * @param args the command line arguments

@@ -11,8 +11,8 @@ import java.sql.SQLException;
 
 public class Conexao {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/bd_the_coxinha_game";
-    private static final String usuario = "aluno";
+    private static final String URL = "jdbc:mysql://localhost:3304/bd_the_coxinha_game";
+    private static final String usuario = "root";
     private static final String senha = "";
     private static Connection conexao = null;
 

@@ -4,61 +4,27 @@
  */
 package br.edu.ifpr.diagrama;
 
-import br.edu.ifpr.thecoxinhagame.conexao.Conexao;
-import java.sql.PreparedStatement;
 import java.util.Random;
 
 /**
  *
  * @author Aluno
  */
-public class Mago {
-     private String nome;
-    private int pontosVida;
-    private int pontosAtaque;
-    private int pontosDefesa;
+public class Mago extends Personagem {
     private int inteligencia;
     private int recuperacao;
-    
-      public Mago(String nome) {
+
+    public Mago() {
+
+    }
+
+    public Mago(String nome) {
         this.nome = nome;
         this.pontosAtaque = new Random().nextInt(6) + 20; // Random entre 20 e 25
         this.pontosDefesa = new Random().nextInt(6) + 5; // Random entre 5 e 10
         this.inteligencia = (this.pontosAtaque - 2) * (new Random().nextInt(9) + 2); // Random entre 2 e 10
         this.recuperacao = (this.pontosAtaque - 2) * (new Random().nextInt(9) + 2); // Random entre 2 e 10
         this.pontosVida = 80; // Pode ser um valor padrão ou também random, como preferir
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public int getPontosVida() {
-        return pontosVida;
-    }
-
-    public void setPontosVida(int pontosVida) {
-        this.pontosVida = pontosVida;
-    }
-
-    public int getPontosAtaque() {
-        return pontosAtaque;
-    }
-
-    public void setPontosAtaque(int pontosAtaque) {
-        this.pontosAtaque = pontosAtaque;
-    }
-
-    public int getPontosDefesa() {
-        return pontosDefesa;
-    }
-
-    public void setPontosDefesa(int pontosDefesa) {
-        this.pontosDefesa = pontosDefesa;
     }
 
     public int getInteligencia() {
@@ -76,8 +42,8 @@ public class Mago {
     public void setRecuperacao(int recuperacao) {
         this.recuperacao = recuperacao;
     }
-    
-     public void receberDano(int dano) {
+
+    public void receberDano(int dano) {
         this.pontosVida -= dano;
         System.out.println(nome + " recebeu " + dano + " de dano. Vida restante: " + pontosVida);
     }
@@ -89,8 +55,8 @@ public class Mago {
 
     @Override
     public String toString() {
-        return "Mago{" + "nome=" + nome + ", pontosVida=" + pontosVida + 
-                ", pontosAtaque=" + pontosAtaque + ", pontosDefesa=" + pontosDefesa + ", inteligencia=" + inteligencia + ", recuperacao=" + recuperacao + '}';
+        return "Mago{" + "nome=" + nome + ", pontosVida=" + pontosVida
+                + ", pontosAtaque=" + pontosAtaque + ", pontosDefesa=" + pontosDefesa + ", inteligencia=" + inteligencia + ", recuperacao=" + recuperacao + '}';
     }
-    
+
 }

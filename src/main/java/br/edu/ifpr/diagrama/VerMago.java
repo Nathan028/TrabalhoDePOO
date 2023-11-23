@@ -159,9 +159,8 @@ public class VerMago extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salvarActionPerformed
-          Mago mago = new Mago();
-
-        mago.setNome(txtNome.getText());
+          Mago mago = new Mago(txtNome.getText());
+          
         mago.setPontosVida(Integer.parseInt(txtPontosVida.getText()));
         mago.setPontosAtaque(Integer.parseInt(txtPontosAtaque.getText()));
         mago.setPontosDefesa(Integer.parseInt(txtPontosDefesa.getText()));

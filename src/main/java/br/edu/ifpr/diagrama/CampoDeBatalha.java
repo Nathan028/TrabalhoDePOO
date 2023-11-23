@@ -4,18 +4,18 @@
  */
 package br.edu.ifpr.diagrama;
 
-import br.edu.ifpr.thelaststanding.conexao.Conexao;
-import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 import javax.swing.*;
+
 /**
  *
  * @author Aluno
  */
 public class CampoDeBatalha extends javax.swing.JFrame {
-    
+
     private Guerreira guerreira;
     private Mago mago;
+
     /**
      * Creates new form CadastroPersonagem
      */
@@ -33,140 +33,155 @@ public class CampoDeBatalha extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
-        jTextField11 = new javax.swing.JTextField();
-        jTextField12 = new javax.swing.JTextField();
+        txtNome = new javax.swing.JTextField();
+        Comecar = new javax.swing.JButton();
+        txtVida = new javax.swing.JTextField();
+        txtAtaque = new javax.swing.JTextField();
+        txtDefesa = new javax.swing.JTextField();
+        txtForca = new javax.swing.JTextField();
+        txtVelocidade = new javax.swing.JTextField();
+        txtNomeM = new javax.swing.JTextField();
+        txtVidaM = new javax.swing.JTextField();
+        txtAtaqueM = new javax.swing.JTextField();
+        txtDefesaM = new javax.swing.JTextField();
+        txtInteligencia = new javax.swing.JTextField();
+        txtRecuperacao = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jTextField1.setEditable(false);
-        jTextField1.setText("Phoebe");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtNome.setEditable(false);
+        txtNome.setText("Phoebe");
+        txtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtNomeActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(40, 110, 190, 22);
+        getContentPane().add(txtNome);
+        txtNome.setBounds(20, 220, 190, 22);
 
-        jButton1.setText("Começar");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(290, 330, 110, 20);
-
-        jTextField2.setEditable(false);
-        jTextField2.setText("100");
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+        Comecar.setText("Começar");
+        Comecar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
+                ComecarActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField2);
-        jTextField2.setBounds(40, 140, 190, 22);
+        getContentPane().add(Comecar);
+        Comecar.setBounds(370, 460, 140, 20);
 
-        jTextField3.setEditable(false);
-        jTextField3.setText("20 a 25");
-        getContentPane().add(jTextField3);
-        jTextField3.setBounds(40, 170, 190, 22);
-
-        jTextField4.setEditable(false);
-        jTextField4.setText("5 a 10");
-        getContentPane().add(jTextField4);
-        jTextField4.setBounds(40, 200, 190, 22);
-
-        jTextField5.setEditable(false);
-        jTextField5.setText("Multiplicador ataque - 2 a 10");
-        getContentPane().add(jTextField5);
-        jTextField5.setBounds(40, 230, 190, 22);
-
-        jTextField6.setEditable(false);
-        jTextField6.setText("Multiplicador defesa - 2 a 10");
-        getContentPane().add(jTextField6);
-        jTextField6.setBounds(40, 260, 190, 22);
-
-        jTextField7.setEditable(false);
-        jTextField7.setText("Saori");
-        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+        txtVida.setEditable(false);
+        txtVida.setText("100");
+        txtVida.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField7ActionPerformed(evt);
+                txtVidaActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField7);
-        jTextField7.setBounds(460, 110, 190, 22);
+        getContentPane().add(txtVida);
+        txtVida.setBounds(20, 250, 190, 22);
 
-        jTextField8.setEditable(false);
-        jTextField8.setText("100");
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+        txtAtaque.setEditable(false);
+        txtAtaque.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
+                txtAtaqueActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField8);
-        jTextField8.setBounds(460, 140, 190, 22);
+        getContentPane().add(txtAtaque);
+        txtAtaque.setBounds(20, 280, 190, 22);
 
-        jTextField9.setEditable(false);
-        jTextField9.setText("20 a 25");
-        getContentPane().add(jTextField9);
-        jTextField9.setBounds(460, 170, 190, 22);
+        txtDefesa.setEditable(false);
+        getContentPane().add(txtDefesa);
+        txtDefesa.setBounds(20, 310, 190, 22);
 
-        jTextField10.setEditable(false);
-        jTextField10.setText("10 a 15");
-        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+        txtForca.setEditable(false);
+        getContentPane().add(txtForca);
+        txtForca.setBounds(20, 340, 190, 22);
+
+        txtVelocidade.setEditable(false);
+        getContentPane().add(txtVelocidade);
+        txtVelocidade.setBounds(20, 370, 190, 22);
+
+        txtNomeM.setEditable(false);
+        txtNomeM.setText("Saori");
+        txtNomeM.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField10ActionPerformed(evt);
+                txtNomeMActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField10);
-        jTextField10.setBounds(460, 200, 190, 22);
+        getContentPane().add(txtNomeM);
+        txtNomeM.setBounds(650, 230, 190, 22);
 
-        jTextField11.setEditable(false);
-        jTextField11.setText("Multiplicador ataque - 2 a 10");
-        getContentPane().add(jTextField11);
-        jTextField11.setBounds(460, 230, 190, 22);
+        txtVidaM.setEditable(false);
+        txtVidaM.setText("100");
+        txtVidaM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtVidaMActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtVidaM);
+        txtVidaM.setBounds(650, 260, 190, 22);
 
-        jTextField12.setEditable(false);
-        jTextField12.setText("Multiplicador defesa - 2 a 10");
-        getContentPane().add(jTextField12);
-        jTextField12.setBounds(460, 260, 190, 22);
+        txtAtaqueM.setEditable(false);
+        getContentPane().add(txtAtaqueM);
+        txtAtaqueM.setBounds(650, 290, 190, 22);
+
+        txtDefesaM.setEditable(false);
+        txtDefesaM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDefesaMActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtDefesaM);
+        txtDefesaM.setBounds(650, 320, 190, 22);
+
+        txtInteligencia.setEditable(false);
+        getContentPane().add(txtInteligencia);
+        txtInteligencia.setBounds(650, 350, 190, 22);
+
+        txtRecuperacao.setEditable(false);
+        getContentPane().add(txtRecuperacao);
+        txtRecuperacao.setBounds(650, 380, 190, 22);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/fundoOF2.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 860, 490);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_txtNomeActionPerformed
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void txtVidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVidaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+    }//GEN-LAST:event_txtVidaActionPerformed
 
-    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+    private void txtNomeMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeMActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField7ActionPerformed
+    }//GEN-LAST:event_txtNomeMActionPerformed
 
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+    private void txtVidaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVidaMActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
+    }//GEN-LAST:event_txtVidaMActionPerformed
 
-    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+    private void txtDefesaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDefesaMActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField10ActionPerformed
+    }//GEN-LAST:event_txtDefesaMActionPerformed
+
+    private void txtAtaqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAtaqueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAtaqueActionPerformed
+
+    private void ComecarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComecarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ComecarActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-       
+
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -176,29 +191,30 @@ public class CampoDeBatalha extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField11;
-    private javax.swing.JTextField jTextField12;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JButton Comecar;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextField txtAtaque;
+    private javax.swing.JTextField txtAtaqueM;
+    private javax.swing.JTextField txtDefesa;
+    private javax.swing.JTextField txtDefesaM;
+    private javax.swing.JTextField txtForca;
+    private javax.swing.JTextField txtInteligencia;
+    private javax.swing.JTextField txtNome;
+    private javax.swing.JTextField txtNomeM;
+    private javax.swing.JTextField txtRecuperacao;
+    private javax.swing.JTextField txtVelocidade;
+    private javax.swing.JTextField txtVida;
+    private javax.swing.JTextField txtVidaM;
     // End of variables declaration//GEN-END:variables
 
-private void iniciarBatalha() {
+    private void iniciarBatalha() {
         guerreira = new Guerreira("Phoebe");
         mago = new Mago("Saori");
 
-        exibirDadosPersonagem(jTextField1, guerreira);
-        exibirDadosPersonagem(jTextField7, mago);
+        txtNome.setText(guerreira.getNome());
+        txtVida.setText("" + guerreira.getPontosVida());
 
-        jButton1.addActionListener(evt -> {
+        Comecar.addActionListener(evt -> {
             realizarRodada();
         });
     }
@@ -206,7 +222,7 @@ private void iniciarBatalha() {
     private void realizarRodada() {
         int danoGuerreira = guerreira.atacar();
         mago.receberDano(danoGuerreira);
-        exibirDadosPersonagem(jTextField7, mago);
+        //exibirDadosPersonagem(jTextField7, mago);
 
         if (mago.getPontosVida() <= 0) {
             JOptionPane.showMessageDialog(this, guerreira.getNome() + " venceu a batalha!");
@@ -215,20 +231,11 @@ private void iniciarBatalha() {
 
         int danoMago = mago.conjurarMagia();
         guerreira.receberDano(danoMago);
-        exibirDadosPersonagem(jTextField1, guerreira);
+        //exibirDadosPersonagem(txtNome, guerreira);
 
         if (guerreira.getPontosVida() <= 0) {
             JOptionPane.showMessageDialog(this, mago.getNome() + " venceu a batalha!");
             System.exit(0);
         }
-    }
-
-    private void exibirDadosPersonagem(JTextField textField, Personagem personagem) {
-        textField.setText(personagem.getNome() + "\n"
-                + "Pontos de Vida: " + personagem.getPontosVida() + "\n"
-                + "Pontos de Ataque: " + personagem.getPontosAtaque() + "\n"
-                + "Pontos de Defesa: " + personagem.getPontosDefesa() + "\n"
-                + "Força: " + personagem.getForca() + "\n"
-                + "Velocidade: " + personagem.getVelocidade());
     }
 }

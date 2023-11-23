@@ -96,7 +96,7 @@ public class CadastroGuerreira extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(150, 380, 120, 30);
+        jButton1.setBounds(150, 380, 150, 30);
 
         txtNome.setText("Phoebe");
         txtNome.addActionListener(new java.awt.event.ActionListener() {

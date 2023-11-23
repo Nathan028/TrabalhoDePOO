@@ -89,16 +89,16 @@ public class CadastroMago extends javax.swing.JFrame {
         getContentPane().add(jLabel8);
         jLabel8.setBounds(180, 60, 230, 250);
 
-        jButton1.setText("Salvar Guerreira");
+        jButton1.setText("Salvar Mago");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(150, 380, 120, 30);
+        jButton1.setBounds(150, 380, 150, 30);
 
-        txtNome.setText("Phoebe");
+        txtNome.setText("Saori");
         txtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNomeActionPerformed(evt);
@@ -185,13 +185,13 @@ public class CadastroMago extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtInteligenciaActionPerformed
 
-    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNomeActionPerformed
-
     private void txtRecuperacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRecuperacaoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtRecuperacaoActionPerformed
+
+    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomeActionPerformed
 
     /**
      * @param args the command line arguments
