@@ -90,14 +90,29 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         txtAtaque.setBounds(20, 280, 190, 22);
 
         txtDefesa.setEditable(false);
+        txtDefesa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDefesaActionPerformed(evt);
+            }
+        });
         getContentPane().add(txtDefesa);
         txtDefesa.setBounds(20, 310, 190, 22);
 
         txtForca.setEditable(false);
+        txtForca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtForcaActionPerformed(evt);
+            }
+        });
         getContentPane().add(txtForca);
         txtForca.setBounds(20, 340, 190, 22);
 
         txtVelocidade.setEditable(false);
+        txtVelocidade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtVelocidadeActionPerformed(evt);
+            }
+        });
         getContentPane().add(txtVelocidade);
         txtVelocidade.setBounds(20, 370, 190, 22);
 
@@ -122,6 +137,11 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         txtVidaM.setBounds(650, 260, 190, 22);
 
         txtAtaqueM.setEditable(false);
+        txtAtaqueM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAtaqueMActionPerformed(evt);
+            }
+        });
         getContentPane().add(txtAtaqueM);
         txtAtaqueM.setBounds(650, 290, 190, 22);
 
@@ -135,10 +155,20 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         txtDefesaM.setBounds(650, 320, 190, 22);
 
         txtInteligencia.setEditable(false);
+        txtInteligencia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtInteligenciaActionPerformed(evt);
+            }
+        });
         getContentPane().add(txtInteligencia);
         txtInteligencia.setBounds(650, 350, 190, 22);
 
         txtRecuperacao.setEditable(false);
+        txtRecuperacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtRecuperacaoActionPerformed(evt);
+            }
+        });
         getContentPane().add(txtRecuperacao);
         txtRecuperacao.setBounds(650, 380, 190, 22);
 
@@ -150,32 +180,56 @@ public class CampoDeBatalha extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtNomeActionPerformed
 
     private void txtVidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVidaActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_txtVidaActionPerformed
 
     private void txtNomeMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeMActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtNomeMActionPerformed
 
     private void txtVidaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVidaMActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtVidaMActionPerformed
 
     private void txtDefesaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDefesaMActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_txtDefesaMActionPerformed
 
     private void txtAtaqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAtaqueActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_txtAtaqueActionPerformed
 
     private void ComecarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComecarActionPerformed
-        // TODO add your handling code here:
+         iniciarBatalha();
     }//GEN-LAST:event_ComecarActionPerformed
+
+    private void txtDefesaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDefesaActionPerformed
+        
+    }//GEN-LAST:event_txtDefesaActionPerformed
+
+    private void txtForcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtForcaActionPerformed
+       
+    }//GEN-LAST:event_txtForcaActionPerformed
+
+    private void txtVelocidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVelocidadeActionPerformed
+        
+    }//GEN-LAST:event_txtVelocidadeActionPerformed
+
+    private void txtAtaqueMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAtaqueMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtAtaqueMActionPerformed
+
+    private void txtInteligenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtInteligenciaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtInteligenciaActionPerformed
+
+    private void txtRecuperacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtRecuperacaoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtRecuperacaoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -212,11 +266,23 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         mago = new Mago("Saori");
 
         txtNome.setText(guerreira.getNome());
-        txtVida.setText("" + guerreira.getPontosVida());
-
-        Comecar.addActionListener(evt -> {
+         txtVida.setText("" + guerreira.getPontosVida());
+         txtAtaque.setText("" + guerreira.getPontosAtaque());
+        txtDefesa.setText("" + guerreira.getPontosDefesa());
+        txtForca.setText("" + guerreira.getForca());
+        txtVelocidade.setText("" + guerreira.getVelocidade());
+        
+        txtNome.setText(mago.getNome());
+         txtVida.setText("" + mago.getPontosVida());
+         txtAtaque.setText("" + mago.getPontosAtaque());
+        txtDefesa.setText("" + mago.getPontosDefesa());
+        txtInteligencia.setText("" + mago.getInteligencia());
+        txtRecuperacao.setText("" + mago.getRecuperacao());
+         
+        Comecar.addActionListener(evt ->) {
             realizarRodada();
-        });
+        }
+       
     }
 
     private void realizarRodada() {
