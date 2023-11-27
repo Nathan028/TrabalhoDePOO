@@ -57,6 +57,7 @@ public class CadastroGuerreira extends javax.swing.JFrame {
         txtPontosAtaque = new javax.swing.JTextField();
         txtPontosDefesa = new javax.swing.JTextField();
         txtForca = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -87,7 +88,7 @@ public class CadastroGuerreira extends javax.swing.JFrame {
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/guerreiro fofo.png"))); // NOI18N
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(180, 60, 230, 250);
+        jLabel8.setBounds(180, 100, 230, 250);
 
         jButton1.setText("Salvar Guerreira");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -148,6 +149,10 @@ public class CadastroGuerreira extends javax.swing.JFrame {
         getContentPane().add(txtForca);
         txtForca.setBounds(10, 270, 170, 22);
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/FUNDOSSS.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 430, 440);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -200,6 +205,7 @@ public class CadastroGuerreira extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

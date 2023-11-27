@@ -65,6 +65,7 @@ public class VerGuerreira extends javax.swing.JFrame {
         txtPontosAtaque = new javax.swing.JTextField();
         txtPontosDefesa = new javax.swing.JTextField();
         txtForca = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -95,7 +96,7 @@ public class VerGuerreira extends javax.swing.JFrame {
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/guerreiro fofo.png"))); // NOI18N
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(180, 60, 230, 250);
+        jLabel8.setBounds(170, 110, 230, 250);
 
         salvar.setText("Salvar Guerreira");
         salvar.addActionListener(new java.awt.event.ActionListener() {
@@ -151,6 +152,10 @@ public class VerGuerreira extends javax.swing.JFrame {
         getContentPane().add(txtForca);
         txtForca.setBounds(10, 270, 170, 22);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/FUNDOSSS.png"))); // NOI18N
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 430, 440);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -203,6 +208,7 @@ public class VerGuerreira extends javax.swing.JFrame {
     private javax.swing.JLabel Forca;
     private javax.swing.JLabel Nome;
     private javax.swing.JLabel Velocidade;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JButton salvar;

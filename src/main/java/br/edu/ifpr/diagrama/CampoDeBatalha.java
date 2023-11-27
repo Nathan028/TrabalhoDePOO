@@ -279,10 +279,6 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         txtInteligencia.setText("" + mago.getInteligencia());
         txtRecuperacao.setText("" + mago.getRecuperacao());
          
-        Comecar.addActionListener(evt ->) {
-            realizarRodada();
-        }
-       
     }
 
     private void realizarRodada() {

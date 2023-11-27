@@ -26,10 +26,14 @@ public class TelaDeCadastro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
         CadastroGuerreira = new javax.swing.JButton();
         CadastroMago = new javax.swing.JButton();
         Batalha = new javax.swing.JButton();
         CadastroItem = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/FUNDOSSS.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -41,7 +45,7 @@ public class TelaDeCadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(CadastroGuerreira);
-        CadastroGuerreira.setBounds(10, 50, 150, 20);
+        CadastroGuerreira.setBounds(90, 150, 240, 50);
 
         CadastroMago.setText("Cadastro Mago");
         CadastroMago.addActionListener(new java.awt.event.ActionListener() {
@@ -50,7 +54,7 @@ public class TelaDeCadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(CadastroMago);
-        CadastroMago.setBounds(10, 20, 150, 20);
+        CadastroMago.setBounds(90, 80, 240, 50);
 
         Batalha.setText("Batalha");
         Batalha.addActionListener(new java.awt.event.ActionListener() {
@@ -59,7 +63,7 @@ public class TelaDeCadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(Batalha);
-        Batalha.setBounds(40, 120, 90, 20);
+        Batalha.setBounds(150, 290, 120, 70);
 
         CadastroItem.setText("Cadastro de Item");
         CadastroItem.addActionListener(new java.awt.event.ActionListener() {
@@ -68,7 +72,11 @@ public class TelaDeCadastro extends javax.swing.JFrame {
             }
         });
         getContentPane().add(CadastroItem);
-        CadastroItem.setBounds(10, 80, 150, 20);
+        CadastroItem.setBounds(90, 220, 240, 50);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/FUNDOSSS.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(0, 0, 430, 440);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -114,5 +122,7 @@ public class TelaDeCadastro extends javax.swing.JFrame {
     private javax.swing.JButton CadastroGuerreira;
     private javax.swing.JButton CadastroItem;
     private javax.swing.JButton CadastroMago;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }
