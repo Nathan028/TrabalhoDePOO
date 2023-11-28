@@ -60,6 +60,10 @@ public class CadastroGuerreira extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(426, 455));
+        setMinimumSize(new java.awt.Dimension(426, 455));
+        setPreferredSize(new java.awt.Dimension(426, 455));
+        setSize(new java.awt.Dimension(426, 455));
         getContentPane().setLayout(null);
 
         jLabel1.setText("Nome:");
@@ -88,7 +92,7 @@ public class CadastroGuerreira extends javax.swing.JFrame {
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/guerreiro fofo.png"))); // NOI18N
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(180, 100, 230, 250);
+        jLabel8.setBounds(180, 110, 230, 250);
 
         jButton1.setText("Salvar Guerreira");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -150,6 +154,9 @@ public class CadastroGuerreira extends javax.swing.JFrame {
         txtForca.setBounds(10, 270, 170, 22);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/FUNDOSSS.png"))); // NOI18N
+        jLabel2.setMaximumSize(new java.awt.Dimension(426, 438));
+        jLabel2.setMinimumSize(new java.awt.Dimension(426, 438));
+        jLabel2.setPreferredSize(new java.awt.Dimension(426, 438));
         getContentPane().add(jLabel2);
         jLabel2.setBounds(0, 0, 430, 440);
 

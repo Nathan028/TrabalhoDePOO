@@ -4,6 +4,12 @@
  */
 package br.edu.ifpr.diagrama;
 
+import br.edu.ifpr.thecoxinhagame.conexao.Conexao;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.*;
 
@@ -49,6 +55,11 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(865, 525));
+        setMinimumSize(new java.awt.Dimension(865, 525));
+        setPreferredSize(new java.awt.Dimension(865, 525));
+        setResizable(false);
+        setSize(new java.awt.Dimension(865, 525));
         getContentPane().setLayout(null);
 
         txtNome.setEditable(false);
@@ -173,50 +184,53 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         txtRecuperacao.setBounds(650, 380, 190, 22);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/fundoOF2.png"))); // NOI18N
+        jLabel2.setMaximumSize(new java.awt.Dimension(853, 500));
+        jLabel2.setMinimumSize(new java.awt.Dimension(853, 500));
+        jLabel2.setPreferredSize(new java.awt.Dimension(853, 500));
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, 0, 860, 490);
+        jLabel2.setBounds(0, 0, 850, 490);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
-        
+
     }//GEN-LAST:event_txtNomeActionPerformed
 
     private void txtVidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVidaActionPerformed
-       
+
     }//GEN-LAST:event_txtVidaActionPerformed
 
     private void txtNomeMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeMActionPerformed
-        
+
     }//GEN-LAST:event_txtNomeMActionPerformed
 
     private void txtVidaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVidaMActionPerformed
-        
+
     }//GEN-LAST:event_txtVidaMActionPerformed
 
     private void txtDefesaMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDefesaMActionPerformed
-        
+
     }//GEN-LAST:event_txtDefesaMActionPerformed
 
     private void txtAtaqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAtaqueActionPerformed
-       
+
     }//GEN-LAST:event_txtAtaqueActionPerformed
 
     private void ComecarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComecarActionPerformed
-         iniciarBatalha();
+        
     }//GEN-LAST:event_ComecarActionPerformed
 
     private void txtDefesaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDefesaActionPerformed
-        
+
     }//GEN-LAST:event_txtDefesaActionPerformed
 
     private void txtForcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtForcaActionPerformed
-       
+
     }//GEN-LAST:event_txtForcaActionPerformed
 
     private void txtVelocidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVelocidadeActionPerformed
-        
+
     }//GEN-LAST:event_txtVelocidadeActionPerformed
 
     private void txtAtaqueMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAtaqueMActionPerformed
@@ -261,24 +275,27 @@ public class CampoDeBatalha extends javax.swing.JFrame {
     private javax.swing.JTextField txtVidaM;
     // End of variables declaration//GEN-END:variables
 
+    
     private void iniciarBatalha() {
-        guerreira = new Guerreira("Phoebe");
-        mago = new Mago("Saori");
+
+        mago = buscarMagoNoBanco();
+
+        txtNomeM.setText(mago.getNome());
+        txtVidaM.setText("" + mago.getPontosVida());
+        txtAtaqueM.setText("" + mago.getPontosAtaque());
+        txtDefesaM.setText("" + mago.getPontosDefesa());
+        txtInteligencia.setText("" + mago.getInteligencia());
+        txtRecuperacao.setText("" + mago.getRecuperacao());
+
+        guerreira = buscarGuerreiraNoBanco();
 
         txtNome.setText(guerreira.getNome());
-         txtVida.setText("" + guerreira.getPontosVida());
-         txtAtaque.setText("" + guerreira.getPontosAtaque());
+        txtVida.setText("" + guerreira.getPontosVida());
+        txtAtaque.setText("" + guerreira.getPontosAtaque());
         txtDefesa.setText("" + guerreira.getPontosDefesa());
         txtForca.setText("" + guerreira.getForca());
         txtVelocidade.setText("" + guerreira.getVelocidade());
-        
-        txtNome.setText(mago.getNome());
-         txtVida.setText("" + mago.getPontosVida());
-         txtAtaque.setText("" + mago.getPontosAtaque());
-        txtDefesa.setText("" + mago.getPontosDefesa());
-        txtInteligencia.setText("" + mago.getInteligencia());
-        txtRecuperacao.setText("" + mago.getRecuperacao());
-         
+
     }
 
     private void realizarRodada() {
@@ -299,5 +316,55 @@ public class CampoDeBatalha extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, mago.getNome() + " venceu a batalha!");
             System.exit(0);
         }
+    }
+
+    private Mago buscarMagoNoBanco() {
+         Mago mago = new Mago();
+        
+        String sql = "SELECT * FROM `tb_mago` ORDER BY id_mago DESC LIMIT 1;";
+        
+        
+        
+        try {
+            PreparedStatement preparacaoDaInstrucao = Conexao.getConexao().prepareStatement(sql);
+            ResultSet resultado = preparacaoDaInstrucao.executeQuery();
+            resultado.next();
+            
+            mago.setNome(resultado.getString("nome"));
+            mago.setPontosVida(resultado.getInt("ponto_vida"));
+            mago.setPontosAtaque(resultado.getInt("ponto_ataque"));
+            mago.setPontosDefesa(resultado.getInt("ponto_defesa"));
+            mago.setInteligencia(resultado.getInt("inteligencia"));
+            mago.setRecuperacao(resultado.getInt("recuperacao"));
+        } catch (SQLException ex) {
+            Logger.getLogger(VerMago.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
+        }
+        return mago;
+    }
+
+    private Guerreira buscarGuerreiraNoBanco() {
+        Guerreira guerreira = new Guerreira();
+        
+        String sql = "SELECT * FROM `tb_guerreira` ORDER BY id_guerreira DESC LIMIT 1;";
+        
+        
+        
+        try {
+            PreparedStatement preparacaoDaInstrucao = Conexao.getConexao().prepareStatement(sql);
+            ResultSet resultado = preparacaoDaInstrucao.executeQuery();
+            resultado.next();
+            
+            guerreira.setNome(resultado.getString("nome"));
+            guerreira.setPontosVida(resultado.getInt("ponto_vida"));
+            guerreira.setPontosAtaque(resultado.getInt("ponto_ataque"));
+            guerreira.setPontosDefesa(resultado.getInt("ponto_defesa"));
+            guerreira.setForca(resultado.getInt("forca"));
+            guerreira.setVelocidade(resultado.getInt("velocidade"));
+        } catch (SQLException ex) {
+            Logger.getLogger(VerGuerreira.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
+        }
+        return guerreira;
     }
 }

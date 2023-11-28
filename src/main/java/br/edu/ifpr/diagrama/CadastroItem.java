@@ -41,10 +41,15 @@ public class CadastroItem extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
 
         jLabel7.setText("jLabel7");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(300, 420));
+        setMinimumSize(new java.awt.Dimension(300, 420));
+        setPreferredSize(new java.awt.Dimension(300, 420));
+        setSize(new java.awt.Dimension(300, 420));
         getContentPane().setLayout(null);
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -142,7 +147,11 @@ public class CadastroItem extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(170, 360, 90, 23);
+        jButton1.setBounds(90, 350, 130, 30);
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/FUNDOSSS.png"))); // NOI18N
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(0, 0, 300, 420);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -220,6 +229,7 @@ public class CadastroItem extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;

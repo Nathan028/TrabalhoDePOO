@@ -20,11 +20,11 @@ public class Mago extends Personagem {
 
     public Mago(String nome) {
         this.nome = nome;
+        this.pontosVida = 100; // Pode ser um valor padrão ou também random, como preferir
         this.pontosAtaque = new Random().nextInt(6) + 20; // Random entre 20 e 25
         this.pontosDefesa = new Random().nextInt(6) + 5; // Random entre 5 e 10
         this.inteligencia = (this.pontosAtaque - 2) * (new Random().nextInt(9) + 2); // Random entre 2 e 10
         this.recuperacao = (this.pontosAtaque - 2) * (new Random().nextInt(9) + 2); // Random entre 2 e 10
-        this.pontosVida = 80; // Pode ser um valor padrão ou também random, como preferir
     }
 
     public int getInteligencia() {

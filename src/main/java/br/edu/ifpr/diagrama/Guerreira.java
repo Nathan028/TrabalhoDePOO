@@ -20,11 +20,12 @@ public class Guerreira extends Personagem {
 
     public Guerreira(String nome) {
         this.nome = nome;
+        this.pontosVida = 100; // Pode ser um valor padrão ou também random, como preferir
         this.pontosAtaque = new Random().nextInt(6) + 20; // Random entre 20 e 25
         this.pontosDefesa = new Random().nextInt(6) + 10; // Random entre 10 e 15
         this.forca = (this.pontosAtaque - 2) * (new Random().nextInt(9) + 2); // Random entre 2 e 10
         this.velocidade = (this.pontosAtaque - 2) * (new Random().nextInt(9) + 2); // Random entre 2 e 10
-        this.pontosVida = 100; // Pode ser um valor padrão ou também random, como preferir
+        
     }
 
     public int getForca() {

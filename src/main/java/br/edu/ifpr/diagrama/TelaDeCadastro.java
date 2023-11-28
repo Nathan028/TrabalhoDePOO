@@ -36,6 +36,10 @@ public class TelaDeCadastro extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/FUNDOSSS.png"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(440, 470));
+        setMinimumSize(new java.awt.Dimension(440, 470));
+        setPreferredSize(new java.awt.Dimension(440, 470));
+        setSize(new java.awt.Dimension(440, 470));
         getContentPane().setLayout(null);
 
         CadastroGuerreira.setText("Cadastro Guerreira");
@@ -88,7 +92,9 @@ public class TelaDeCadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_CadastroMagoActionPerformed
 
     private void CadastroItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroItemActionPerformed
-        // TODO add your handling code here:
+        CadastroItem cadastroItem = new CadastroItem();
+        cadastroItem.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_CadastroItemActionPerformed
 
     private void CadastroGuerreiraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CadastroGuerreiraActionPerformed
