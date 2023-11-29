@@ -67,6 +67,7 @@ public class CadastroMago extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(426, 455));
         getContentPane().setLayout(null);
 
+        jLabel1.setForeground(new java.awt.Color(0, 0, 51));
         jLabel1.setText("Nome:");
         getContentPane().add(jLabel1);
         jLabel1.setBounds(10, 10, 36, 16);
