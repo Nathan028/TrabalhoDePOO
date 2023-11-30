@@ -45,14 +45,13 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         txtAtaque = new javax.swing.JTextField();
         txtDefesa = new javax.swing.JTextField();
         txtForca = new javax.swing.JTextField();
-        txtTeste = new javax.swing.JTextField();
         txtNomeM = new javax.swing.JTextField();
         txtVidaM = new javax.swing.JTextField();
         txtAtaqueM = new javax.swing.JTextField();
         txtDefesaM = new javax.swing.JTextField();
         txtInteligencia = new javax.swing.JTextField();
         txtRecuperacao = new javax.swing.JTextField();
-        txtVelocidade1 = new javax.swing.JTextField();
+        txtVelocidade = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
 
@@ -120,15 +119,6 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         getContentPane().add(txtForca);
         txtForca.setBounds(20, 340, 190, 22);
 
-        txtTeste.setEditable(false);
-        txtTeste.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTesteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(txtTeste);
-        txtTeste.setBounds(20, 440, 190, 22);
-
         txtNomeM.setEditable(false);
         txtNomeM.setText("Saori");
         txtNomeM.addActionListener(new java.awt.event.ActionListener() {
@@ -185,14 +175,14 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         getContentPane().add(txtRecuperacao);
         txtRecuperacao.setBounds(650, 380, 190, 22);
 
-        txtVelocidade1.setEditable(false);
-        txtVelocidade1.addActionListener(new java.awt.event.ActionListener() {
+        txtVelocidade.setEditable(false);
+        txtVelocidade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtVelocidade1ActionPerformed(evt);
+                txtVelocidadeActionPerformed(evt);
             }
         });
-        getContentPane().add(txtVelocidade1);
-        txtVelocidade1.setBounds(20, 370, 190, 22);
+        getContentPane().add(txtVelocidade);
+        txtVelocidade.setBounds(20, 370, 190, 22);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/fundoOF2.png"))); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(853, 500));
@@ -244,10 +234,6 @@ public class CampoDeBatalha extends javax.swing.JFrame {
 
     }//GEN-LAST:event_txtForcaActionPerformed
 
-    private void txtTesteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTesteActionPerformed
-
-    }//GEN-LAST:event_txtTesteActionPerformed
-
     private void txtAtaqueMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAtaqueMActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAtaqueMActionPerformed
@@ -260,9 +246,9 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtRecuperacaoActionPerformed
 
-    private void txtVelocidade1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVelocidade1ActionPerformed
+    private void txtVelocidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtVelocidadeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtVelocidade1ActionPerformed
+    }//GEN-LAST:event_txtVelocidadeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -290,8 +276,7 @@ public class CampoDeBatalha extends javax.swing.JFrame {
     private javax.swing.JTextField txtNome;
     private javax.swing.JTextField txtNomeM;
     private javax.swing.JTextField txtRecuperacao;
-    private javax.swing.JTextField txtTeste;
-    private javax.swing.JTextField txtVelocidade1;
+    private javax.swing.JTextField txtVelocidade;
     private javax.swing.JTextField txtVida;
     private javax.swing.JTextField txtVidaM;
     // End of variables declaration//GEN-END:variables
@@ -313,7 +298,7 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         txtAtaque.setText("" + guerreira.getPontosAtaque());
         txtDefesa.setText("" + guerreira.getPontosDefesa());
         txtForca.setText("" + guerreira.getForca());
-        txtTeste.setText("" + guerreira.getVelocidade());
+        txtVelocidade.setText("" + guerreira.getVelocidade());
     }
     
     
@@ -321,10 +306,7 @@ public class CampoDeBatalha extends javax.swing.JFrame {
         int danoGuerreira = guerreira.atacar();
         mago.receberDano(danoGuerreira);
         
-        int inicial = (int) (Math.random());
         
-        
-
         if (mago.getPontosVida() <= 0) {
             JOptionPane.showMessageDialog(this, guerreira.getNome() + " venceu a batalha!");
             System.exit(0);
@@ -338,6 +320,7 @@ public class CampoDeBatalha extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, mago.getNome() + " venceu a batalha!");
             System.exit(0);
         }
+        
     }
 
     private Mago buscarMagoNoBanco() {
